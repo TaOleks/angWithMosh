@@ -1,10 +1,11 @@
-<ul class="nav nav-pills">
-  <li [class.nav-link]="viewMode == 'map'"><a (click)="viewMode = 'map'">Map View</a></li>
-  <li [class.nav-link]="viewMode == 'list'"><a (click)="viewMode = 'list'">List View</a></li>
+<ul>
+<!-- index: number: индекс текущего элемента в итерируемом объекте.
+count: number: длина итерации.
+first: boolean: True, если элемент является первым элементом в итерируемом объекте.
+last: boolean: True, когда элемент является последним элементом в итерируемом объекте.
+even: boolean: True, если элемент имеет четный индекс в итерируемом объекте.
+odd: boolean: True, если элемент имеет нечетный индекс в итерируемом объекте. -->
+  <li *ngFor="let course of courses; even as isEven ">
+    {{course.name}} <span *ngIf="isEven">(EVEN)</span>
+  </li>
 </ul>
-
-<div [ngSwitch]="viewMode">
-<div *ngSwitchCase="'map'">Map View Content</div>
-<div *ngSwitchCase="'list'">List View Content</div>
-<div *ngSwitchDefault>Otherwise</div>
-</div>
