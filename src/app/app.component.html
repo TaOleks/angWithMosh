@@ -1,11 +1,9 @@
+<button (click)="onAdd()">Add course</button>
+
 <ul>
-<!-- index: number: индекс текущего элемента в итерируемом объекте.
-count: number: длина итерации.
-first: boolean: True, если элемент является первым элементом в итерируемом объекте.
-last: boolean: True, когда элемент является последним элементом в итерируемом объекте.
-even: boolean: True, если элемент имеет четный индекс в итерируемом объекте.
-odd: boolean: True, если элемент имеет нечетный индекс в итерируемом объекте. -->
-  <li *ngFor="let course of courses; even as isEven ">
-    {{course.name}} <span *ngIf="isEven">(EVEN)</span>
+  <li *ngFor="let course of courses">
+    {{course.name}}
+    <button (click)="onRemove(course)">Remove</button>
+    <button (click)="onChange(course)">Update</button>
   </li>
 </ul>
