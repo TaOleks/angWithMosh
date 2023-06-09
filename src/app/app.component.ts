@@ -8,11 +8,6 @@ import { FavoriteChangedEventArgs } from './favorite/favorite.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-task = {
-  title:'Review applications',
-  assignee:{
-    name:'John Joy'
-  }
-}
+
 
 }
