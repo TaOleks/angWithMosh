@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class ContactFormComponent {
 
+log(f:any){console.log(f)}
 }
