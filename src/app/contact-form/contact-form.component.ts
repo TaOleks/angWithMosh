@@ -9,4 +9,6 @@ import { NgForm } from '@angular/forms';
 export class ContactFormComponent {
 
 log(f:any){console.log(f)}
+
+submit(f:any){console.log(f)}
 }
