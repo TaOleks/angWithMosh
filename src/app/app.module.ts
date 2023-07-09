@@ -7,6 +7,8 @@ import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.compo
 import { InputFormatDirective } from './input-format.directive';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +17,13 @@ import { FormsModule } from '@angular/forms';
     BootstrapPanelComponent,
     InputFormatDirective,
     ContactFormComponent,
+    NewCourseFormComponent,
 
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
