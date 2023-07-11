@@ -17,8 +17,8 @@ export class NewCourseFormComponent {
     {id:3, name:'Languages'}
   ]
 
-  submit(f:NgForm){
-    console.log(f)
+  submit(course:NgForm){
+    console.log(course)
   }
 
   greatWork(){
