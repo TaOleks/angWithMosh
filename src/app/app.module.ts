@@ -6,9 +6,10 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
 import { InputFormatDirective } from './input-format.directive';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
+import { SignUpFormComponent } from './signup-form/signup-form.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,13 @@ import { NewCourseFormComponent } from './new-course-form/new-course-form.compon
     InputFormatDirective,
     ContactFormComponent,
     NewCourseFormComponent,
+    SignUpFormComponent,
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     NgbModule
   ],
   providers: [],
