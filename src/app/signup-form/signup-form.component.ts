@@ -6,9 +6,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: './signup-form.component.html',
   styleUrls: ['./signup-form.component.css']
 })
+// So for add multiply validation errors we use array
 export class SignUpFormComponent {
   form = new FormGroup({
-    username:new FormControl('', Validators.required),
+
+    username:new FormControl('', [
+    Validators.required,
+    Validators.minLength(3)]),
     password: new FormControl('', Validators.required)
   })
 
