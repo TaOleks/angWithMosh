@@ -1,7 +1,5 @@
-<form [formGroup]="form" (ngSubmit)="login()">
-  <div *ngIf="form?.errors" class="alert alert-danger">
-    The username or password invalid
-  </div>
+<form [formGroup]="form">
+<div formGroupName="account">
   <div class="form-group">
     <label for="userName">Username</label>
     <input
@@ -27,6 +25,6 @@
     type="text"
     class="form-control">
   </div>
-
+</div>
   <button class="btn btn-primary" type="submit">Sign Up</button>
 </form>

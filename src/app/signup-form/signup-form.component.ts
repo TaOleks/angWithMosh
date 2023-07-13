@@ -10,22 +10,15 @@ import { UsernameValidators } from './username.validators';
 // So for add multiply validation errors we use array
 export class SignUpFormComponent {
   form = new FormGroup({
-
-    username:new FormControl('',
-    Validators.required,
-    UsernameValidators.ShouldBeUnique),
-    password: new FormControl('', Validators.required)
+    account:new FormGroup({
+      username:new FormControl(''),
+      password: new FormControl('')
+    })
   })
 
-  login(){
-    this.form.setErrors({
-        invalidLogin:true
-      })
-
-  }
 
   get username(){
-    return this.form.get('username')
+    return this.form.get('account.username')
   }
 
 }
