@@ -7,4 +7,16 @@ export class UsernameValidators{
     return null
   }
 
+  static ShouldBeUnique(control:AbstractControl):Promise<ValidationErrors|null>{
+    return new Promise((resolve, reject)=>{
+      setTimeout(()=>{
+        if(control.value === 'takhtai')
+        resolve({ShouldBeUnique:true})
+      else resolve (null)
+      },2000)
+    })
+
+
+  }
+
 }
