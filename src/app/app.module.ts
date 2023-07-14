@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { SignUpFormComponent } from './signup-form/signup-form.component';
+import { NewFormArrayComponent } from './new-form-array/new-form-array.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SignUpFormComponent } from './signup-form/signup-form.component';
     ContactFormComponent,
     NewCourseFormComponent,
     SignUpFormComponent,
+    NewFormArrayComponent,
 
   ],
   imports: [
