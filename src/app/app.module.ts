@@ -11,6 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { SignUpFormComponent } from './signup-form/signup-form.component';
 import { NewFormArrayComponent } from './new-form-array/new-form-array.component';
+import { ChangePasswordFormComponent } from './change-password-form/change-password-form.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NewFormArrayComponent } from './new-form-array/new-form-array.component
     NewCourseFormComponent,
     SignUpFormComponent,
     NewFormArrayComponent,
+    ChangePasswordFormComponent,
 
   ],
   imports: [

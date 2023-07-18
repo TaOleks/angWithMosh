@@ -7,22 +7,16 @@ import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@ang
   styleUrls: ['./new-form-array.component.css']
 })
 export class NewFormArrayComponent {
- form=new FormGroup({
-  name:new FormControl('', Validators.required),
-  contact:new FormGroup({
-    email:new FormControl(),
-    phone: new FormControl()
-  }),
-  topics:new FormArray([])
- });
+ form;
 
  constructor(fb:FormBuilder){
-   fb.group({
+   this.form=fb.group({
     name:['', Validators.required],
     contact:fb.group({
       email:[],
       phone:[]
-    })
+    }),
+    topics:fb.array([])
    })
  }
 
