@@ -12,6 +12,9 @@ import { NewCourseFormComponent } from './new-course-form/new-course-form.compon
 import { SignUpFormComponent } from './signup-form/signup-form.component';
 import { NewFormArrayComponent } from './new-form-array/new-form-array.component';
 import { ChangePasswordFormComponent } from './change-password-form/change-password-form.component';
+import { PostsComponent } from './posts/posts.component';
+import {HttpClientModule}from '@angular/common/http'
+
 
 @NgModule({
   declarations: [
@@ -24,13 +27,15 @@ import { ChangePasswordFormComponent } from './change-password-form/change-passw
     SignUpFormComponent,
     NewFormArrayComponent,
     ChangePasswordFormComponent,
+    PostsComponent,
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

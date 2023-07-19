@@ -8,15 +8,19 @@ import { PasswordValidators } from './password.validators';
   styleUrls: ['./change-password-form.component.css']
 })
 export class ChangePasswordFormComponent {
-  form:FormGroup;
+  form:FormGroup
   // =new FormGroup({
   //   oldPassword: new FormControl('',[Validators.required,
   //     PasswordValidators.validOldPassword
   //   ]),
   //   newPassword: new FormControl('',Validators.required),
   //   confirmPassword: new FormControl('',[Validators.required]),
+  //   validator:PasswordValidators.passwordsShouldMatch
 
   // })
+
+
+
   constructor(fb:FormBuilder){
     this.form = fb.group({
       oldPassword:['',
