@@ -14,6 +14,7 @@ import { NewFormArrayComponent } from './new-form-array/new-form-array.component
 import { ChangePasswordFormComponent } from './change-password-form/change-password-form.component';
 import { PostsComponent } from './posts/posts.component';
 import {HttpClientModule}from '@angular/common/http'
+import { PostService } from './post.service';
 
 
 @NgModule({
@@ -37,7 +38,9 @@ import {HttpClientModule}from '@angular/common/http'
     NgbModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    PostService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
