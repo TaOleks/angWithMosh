@@ -1,3 +1,4 @@
+import { AnimationStyleMetadata } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -6,7 +7,7 @@ import { Injectable } from '@angular/core';
 })
 
 export class PostService {
-  private url='https://abcjsonplaceholder.typicode.com/posts'
+  private url='https://jsonplaceholder.typicode.com/posts'
   constructor(private http:HttpClient) { }
 
   getPosts(){
@@ -21,7 +22,10 @@ export class PostService {
    return this.http.patch(this.url + '/' + post.id, JSON.stringify({isRead:true}))
   }
 
-  deletePost(id:number){
+  deletePost(id:any){
+    console.log(id)
+    console.log(this.http.delete(this.url +'/' ))
    return this.http.delete(this.url +'/'+id )
+
   }
 }

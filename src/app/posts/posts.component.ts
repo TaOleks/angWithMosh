@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../post.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-posts',
@@ -18,7 +19,7 @@ export class PostsComponent implements OnInit {
 // Unexpected errors(Server is offline, Network is down, Unhandled exceptions)
 // Expected errors( "Not Found errors 404", "Bad request errors 400")
 
-ngOnInit(): void {
+ngOnInit() {
   this.service.getPosts()
       .subscribe(response =>{
        this.posts=response
@@ -39,9 +40,15 @@ this.service.createPost(post)
   post.id=response
   this.posts.splice(0,0,post)
 console.log (this.posts)
-},error =>{
+},(error:Response) =>{
+  if (error.status===400){
+// this.form.setErrors(error.json())
+}
+else{
   alert('An unexpected error occurred')
   console.log(error)
+}
+
 })
 }
 
@@ -60,11 +67,22 @@ this.service.updatePost(post)
 deletePost(post:any){
   this.service.deletePost(post.id)
   .subscribe(response=>{
+
     let index=this.posts.indexOf(post);
     this.posts.splice(index,1)
-  },error =>{
-    alert('An unexpected error occurred')
-    console.log(error)
+
+
+  },
+  (error:Response) =>{ console.log(error.status)
+    if (error.status===404)
+
+      alert('This post is already been deleted')
+    else{
+         alert('An unexpected error occurred')
+
+      }
+
+
   })
 }
 
